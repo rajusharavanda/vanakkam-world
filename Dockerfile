@@ -18,7 +18,7 @@ RUN tar -zxvf apache-tomcat-8.5.69.tar.gz
 RUN mv apache-tomcat-8.5.69 tomcat8
 #ADD ./webapp.war /opt/tomcat/webapps
 WORKDIR /opt/tomcat8/webapps
-RUN wget https://rajujenkins.s3.ap-south-1.amazonaws.com/webapp/target/webapp.war
+#RUN wget https://rajujenkins.s3.ap-south-1.amazonaws.com/webapp/target/webapp.war
 RUN echo export JAVA_HOME=/opt/java8 >> /etc/profile
 RUN echo export PATH=$PATH:/opt/java8/bin >> /etc/profile
 ENV JAVA_HOME "/opt/java8"
